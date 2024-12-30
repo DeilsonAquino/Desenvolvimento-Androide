@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-top: 30px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #000;
+            margin: 20px 0;
+        }
+
+        p {
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 5px;
+            margin-left: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+            border: none;
+            background-color: #d3d1d1;
+            font-size: 1em;
+            color: #333;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #000;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        .links a {
+            display: block;
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        .links a:hover {
+            color: #000;
+        }
+
+        /* Background pattern */
+        .pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 100px;
+        }
+
+        /* Media Queries for Mobile responsiveness */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                font-size: 1em;
+            }
+
+            button {
+                font-size: 1em;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pattern">
+        <!-- Adicione um padrão decorativo aqui se necessário, ou use um SVG/Imagem. -->
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <!-- Adicione a logo aqui, ou você pode usar um ícone padrão. -->
+            <img src="icone.png" alt="Logo">
+        </div>
+
+        <h1>Login</h1>
+        <p>Faça login para continuar</p>
+
+        <form action="login.php" method="POST">
+            <label for="login">LOGIN</label>
+            <input type="text" id="login" name="login" placeholder="Deilson Aquino" required>
+
+            <label for="senha">SENHA</label>
+            <input type="password" id="senha" name="senha" placeholder="******" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <div class="links">
+            <a href="#">Esqueci minha Senha</a>
+            <a href="#">Cadastrar-se</a>
+        </div>
+    </div>
+</body>
+</html>
