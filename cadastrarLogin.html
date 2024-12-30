@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova Conta</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #333;
+            width: 50%;
+            height: 100px;
+            border-bottom-left-radius: 50px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 20px;
+        }
+
+        .pattern::before {
+            content: '';
+            background: url('icone.png');
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #928e8e7c;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .back-btn img {
+            width: 20px;
+            height: 20px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #000;
+            margin-top: 60px;
+        }
+
+        p {
+            color: #999;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 5px;
+            margin-left: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+            border: none;
+            background-color: #d3d1d1;
+            font-size: 1em;
+            color: #333;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #61c23e;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        .links a {
+            display: block;
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        .links a:hover {
+            color: #000;
+        }
+
+        /* Media Queries for Mobile responsiveness */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            select {
+                font-size: 0.9em;
+            }
+
+            button {
+                font-size: 0.9em;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Botão de Voltar -->
+        <button class="back-btn">
+            <a href="index.html"><img src="voltar.png" alt="Voltar"></a>
+        </button>
+
+        <!-- Padrão decorativo no topo -->
+        <div class="pattern"></div>
+<br><br>
+        <h1>Criar uma Conta</h1>
+        <p>Você já é cadastrado(a)? <a href="index.html">Faça Login aqui.</a></p>
+
+        <form action="cadastro.php" method="POST">
+            <label for="nome">NOME</label>
+            <input type="text" id="nome" name="nome" placeholder="Deilson Aquino" required>
+
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" placeholder="deilsonaquino@gmail.com" required>
+
+            <label for="senha">SENHA</label>
+            <input type="password" id="senha" name="senha" placeholder="******" required>
+
+            <label for="nascimento">DATA DE NASCIMENTO</label>
+            <input type="date" id="nascimento" name="senha" placeholder="00/00/0000" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
